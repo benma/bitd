@@ -1,0 +1,25 @@
+Name:                bitd
+Version:             0.1
+Synopsis:            bitcoin info daemon
+License:             BSD3
+License-file:        LICENSE
+Author:              Marko Bencun
+Maintainer:          mbencun@gmail.com
+Category:            Application
+Build-type:          Simple
+Cabal-version:       >=1.2
+
+
+Executable bitd
+  Main-is:             BitD.hs
+  hs-source-dirs:      src
+  include-dirs:        src/inc/
+  Build-depends:       base, mtl, transformers, lens==4.1.2.1, binary>=0.7.1.0, cereal>=0.4.0.1,
+                       cryptohash, leveldb-haskell, data-default, hslogger,
+                       bytestring>=0.10.4.0, base16-bytestring, time, acid-state>=0.12.2, 
+                       containers, concurrent-extra>=0.7.0.7, unordered-containers, aeson, text, errors,
+                       network>=2.4.2.2, process, resourcet, directory, system-filepath, hashable,
+                       mwc-random, pipes-attoparsec, attoparsec, dlist, safecopy,
+                       pipes, async, stm, pipes-concurrency, pipes-errors, pipes-bytestring, pipes-binary, pipes-parse, amqp,
+                       snap-core, snap-server, optparse-applicative
+  Ghc-options:         -O2 -Wall -threaded -fno-warn-unused-imports
