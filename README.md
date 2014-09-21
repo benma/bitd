@@ -3,7 +3,11 @@
 bitd is an efficient indexer for the Bitcoin blockchain written in Haskell, supporting getbalance and other queries.
 The data is stored in a leveldb database.
 
-* [blockchain parser instances](src/BitD/Protocol/Blockchain.hs)
+Also contained is code to connect to a bitcoin node and stream new transactions. 
+
+* [blockchain data format](src/BitD/Protocol/Blockchain.hs)
+* [bitcoin network messages](src/BitD/Protocol/Messages.hs)
+* [network connection to a bitcoin node, streaming of new transactions](src/BitD/ConnectionDaemon.hs)
 * [synchronizing of index database with the blockchain](src/BitD/Sync.hs)
 * [JSON web service](src/BitD/WebService.hs)
 
